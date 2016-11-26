@@ -1,7 +1,7 @@
 import { h, Component } from 'preact'
 
 import Title from './title'
-import Counter from './counter'
+import Users from './users'
 
 export default class App extends Component {
 
@@ -9,10 +9,10 @@ export default class App extends Component {
     super()
   }
 
-  render = () => (
+  render = (props, state) => (
     <main>
       <Title text='Hello Preact!' />
-      <Counter />
+      <Users />
     </main>
   )
 

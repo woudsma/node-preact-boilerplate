@@ -1,7 +1,7 @@
 # Boilerplate: ES6 - Node - Preact
 ## Features: live reload on server/client side - multithreading (with cluster) - very basic API endpoint - ES6 with Babel
 
-A clean workflow with [ES6](https://github.com/lukehoban/es6features) on both front and backend.
+A basic/clean workflow with [ES6](https://github.com/lukehoban/es6features) on both front and backend. It uses Preact instead of React, it's lighter and has a few syntax improvements.
 Server and client code is watched by nodemon and webpack and auto-reloads in every browser on change, which saves a lot of time.
 I'm a big fan of [RxJS](https://github.com/ReactiveX/rxjs), and functional programming in general.
 This setup combines really well with these kind of frameworks.
@@ -61,14 +61,14 @@ You should probably add more code for production use.
 ### Usage on a cloud VPS
 Nginx could be used as a web server, to serve the static content (instead of Express). Enabling gzip and caching in Nginx saves resources and bandwidth on high-traffic applications.
 Using a reverse proxy (defined in the Nginx virtual host file), you can route the API requests to the Node server.
-This way the Node server can still run on e.g. 127.0.0.1:3000. This helps to load-balance your application even more, and let Nginx handle the static content, SSL (Let's Encrypt), etc. It also makes it easier to keep code synchronized to your local machine using git.
+This way the Node server can still run on e.g. `http://127.0.0.1:3000`. This helps to load-balance your application even more, and let Nginx handle the static content, SSL (Let's Encrypt), etc. It also makes it easier to keep code synchronized to your local machine using git.
 
 - [Nginx installation on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04)
 - [Setting up Nginx server blocks](https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04)
 
 This is a sample virtual host file, `/etc/nginx/sites-available/test.com` (don't forget to link it to `sites-enabled`)
 It serves static content from the public folder to your-site-name.com, and requests to api.your-site-name.com to the Node server. (using 2 server blocks)
-You will also need to create an extra A record for the newly created `api.your-site-name.com` subdomain in your DNS configuration.
+You will also need to create an extra `A` record for the newly created `api.your-site-name.com` subdomain in your DNS configuration.
 ```
 upstream node {
 	server 127.0.0.1:3000;
