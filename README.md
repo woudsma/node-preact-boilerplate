@@ -1,5 +1,5 @@
 # Boilerplate: ES6 - Node - Preact
-## Features: live reload on server/client side - multithreading (with cluster) - very basic API endpoint - ES6 with Babel
+## Features: live reload on server/client side - multithreading (with cluster) - basic API endpoint - ES6 with Babel
 
 A basic/clean workflow with [ES6](https://github.com/lukehoban/es6features) on both front and backend. It uses Preact instead of React, it's lighter and has a few syntax improvements.
 Server and client code is watched by nodemon and webpack and auto-reloads in every browser on change, which saves a lot of time.
@@ -35,7 +35,7 @@ webpack: `npm i webpack -g`
 If you get permission errors, try again with `sudo`  
 
 ## Installation
-1. `git clone https://github.com/mojibaked/node-preact-boilerplate.git`  
+1. `git clone https://github.com/woudsma/node-preact-boilerplate.git`  
 2. `mv node-preact-boilerplate your-project-name`  
 3. `cd your-project-name`  
 4. `npm install`  

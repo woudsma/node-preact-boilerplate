@@ -10,7 +10,7 @@ export default class Users extends Component {
 
   componentWillMount = () => fetch(`${api}/users`)
     .then(data => data.json())
-    .then(data => this.setState({ users: Object.keys(data).map(id => data[id])}))
+    .then(data => this.setState({ users: Object.keys(data).map(key => data[key]) }))
 
   // ES6 Object destructuring https://github.com/lukehoban/es6features#destructuring
   render = (props, { users = [] }) => (
