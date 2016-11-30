@@ -12,7 +12,7 @@ Start coding in `src/main.js` or `public/src/views/app.js`.
 The static content like `index.html bundle.js` in the `public` folder gets served by the Node server, with Express.
 The API routes are defined in `src/router.js`, which describes the basic API endpoint.
 
-Bundle size is 30kb. 11kb gzipped!
+Bundle size is 38kb. 13kb gzipped!
 
 ## Workflow
 Server:  

@@ -38,6 +38,7 @@
     "express": "^4.14.0",
     "json-loader": "^0.5.4",
     "preact": "^6.4.0",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "whatwg-fetch": "^2.0.1"
   }
 }
